@@ -14,7 +14,7 @@ def test_import():
     test data import - this example is completed for you to assist with the other test functions
     '''
     try:
-        dataframe = import_data("bank_data.csv")
+        dataframe = import_data("./data/bank_data.csv")
         logging.info("Testing import_data: SUCCESS")
     except FileNotFoundError as err:
         logging.error("Testing import_eda: The file wasn't found")
