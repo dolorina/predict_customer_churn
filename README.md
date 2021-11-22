@@ -15,7 +15,6 @@ Apllied concepts in this project:
 
 
 ## Running Files
-How do you run your files? What should happen when you run your files?
 
 1. Running the below code in the terminal should test each of the functions and provide any errors to a file stored in the logs folder.
 ```
