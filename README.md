@@ -16,7 +16,7 @@ Apllied concepts in this project:
 
 ## Running Files
 
-1. Running the below code in the terminal should test each of the functions and provide any errors to a file stored in the logs folder.
+1. Running the below code in the terminal should produce the .log file with the resulst from running all tests.
 ```
 $ ipython churn_script_logging_and_tests.py
 ```
