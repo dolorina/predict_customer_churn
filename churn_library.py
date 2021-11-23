@@ -1,6 +1,10 @@
-# library doc string
+'''
+Module to predict customer churn with ML Methods
+(Random Forest Classificator and Logisctic Regression)
 
-
+Author: Marina
+Date: November 2021
+'''
 # import libraries
 from sklearn.metrics import plot_roc_curve, classification_report
 from sklearn.model_selection import GridSearchCV
@@ -192,7 +196,7 @@ def feature_importance_plot(model, X_data, output_pth):
              None
     '''
     # Calculate feature importances
-    importances = model.best_estimator_.feature_importances_
+    importances = model.feature_importances_
     # Sort feature importances in descending order
     indices = np.argsort(importances)[::-1]
 
@@ -200,7 +204,7 @@ def feature_importance_plot(model, X_data, output_pth):
     names = [X_data.columns[i] for i in indices]
 
     # Create plot
-    plt.figure(figsize=(20, 5))
+    plt.figure(figsize=(20, 10))
 
     # Create plot title
     plt.title("Feature Importance")
@@ -308,3 +312,6 @@ if __name__ == "__main__":
         DF, RESPONSE)
 
     train_models(X_TRAIN, X_TEST, Y_TRAIN, Y_TEST)
+
+    RFC_MODEL = joblib.load('./models/rfc_model.pkl')
+    feature_importance_plot(RFC_MODEL, DF[RESPONSE], './images/results')
