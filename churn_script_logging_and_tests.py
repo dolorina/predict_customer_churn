@@ -1,3 +1,9 @@
+'''
+Module for logging and testing functions from churn_library.py
+
+Author: Marina
+Date: November 2021
+'''
 import logging
 from churn_library import import_data, perform_eda, encoder_helper, perform_feature_engineering, train_models
 
